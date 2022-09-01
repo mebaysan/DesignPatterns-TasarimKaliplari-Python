@@ -62,3 +62,5 @@ Temelde 3 tip tasarım kalıbı vardır.
 
 ### Facade Pattern
 
+İstemci (client) sınıfları ile alt sistem (subsystem) sınıfları arasındaki etkileşim için kullanılır. Facade bir `wrapper class` tır. Alt sistem sınıflarını encapsulate edip onların karmaşıklığını (complexity) gizlemek için kullanılır. İstemcilerin, alt sistem sınıfları ile `Facade` üzerinden etkileşime geçmesini sağlar. [facade.py](./src/structural-patterns/facade-pattern/facade.py) dosyasında Python ile bir örneğini bulabilirsiniz.
+
