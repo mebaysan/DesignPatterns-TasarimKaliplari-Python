@@ -8,6 +8,8 @@
   - [Creational Patterns](#creational-patterns-1)
     - [Singleton](#singleton)
     - [Factory Method Pattern](#factory-method-pattern)
+  - [Structural Patterns](#structural-patterns-1)
+    - [Facade Pattern](#facade-pattern)
 
 # Giriş
 
@@ -55,4 +57,8 @@ Temelde 3 tip tasarım kalıbı vardır.
 ### Factory Method Pattern
 
 **Factory Method Pattern** bir **"creational pattern"** dir. Aslında Factory Method Pattern tek başına bir kalıp değildir. Bu kalıp objeleri oluşturmak için bir `Factory` sınıfı kullanmaz. Bunun yerine sınıfın altında ayrı bir **factory method** kullanır. Bu kalıbın gücü özelleştirilmiş objeleri oluşturabilmesinden gelmektedir. Python örneğine bakmak için buradaki [factory_method.py](src/creatorial-patterns/factory-method/factory_method.py) dosyasına bakabilirsiniz.
+
+## Structural Patterns
+
+### Facade Pattern
 
