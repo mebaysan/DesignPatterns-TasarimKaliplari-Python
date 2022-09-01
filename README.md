@@ -10,6 +10,7 @@
     - [Factory Method Pattern](#factory-method-pattern)
   - [Structural Patterns](#structural-patterns-1)
     - [Facade Pattern](#facade-pattern)
+    - [Adapter Pattern](#adapter-pattern)
 
 # Giriş
 
@@ -63,4 +64,21 @@ Temelde 3 tip tasarım kalıbı vardır.
 ### Facade Pattern
 
 İstemci (client) sınıfları ile alt sistem (subsystem) sınıfları arasındaki etkileşim için kullanılır. Facade bir `wrapper class` tır. Alt sistem sınıflarını encapsulate edip onların karmaşıklığını (complexity) gizlemek için kullanılır. İstemcilerin, alt sistem sınıfları ile `Facade` üzerinden etkileşime geçmesini sağlar. [facade.py](./src/structural-patterns/facade-pattern/facade.py) dosyasında Python ile bir örneğini bulabilirsiniz.
+
+### Adapter Pattern
+
+Adapter tasarım kalıbı iki farklı sistem arasında uyumlu bir arayüz (interface) görevi görür ve bu iki sistemin haberleşmesini sağlar. Adapter tasarım kalıbı birkaç parçadan oluşmaktadır.
+
+- Bir istemci (client) sınıfı. Bu sınıf; sistemimizde üçüncü parti veya dışarıdan bir sistemi kullanmak isteyen bir parçadır. 
+- Bir adaptee sınıfı. Bu üçüncü parti bir kütüphane veya dışarıdan bir servis tarafından kullanılacak olan sınıftır.
+- Bir adaptör (adapter) sınıfı. Bu sınıf istemci ve adaptee sınıfları arasında bulunacaktır. Adaptör sınıfı istemcinin görmek istediği bilgiyi (data) hedef arayüzü (interface) kullanarak sağlar. Aynı zamanda istemcinin istediğini adaptee sınıfının anlayacağı şekilde çevirir (translate) ve adaptee sınıfına döner (return). Bir tür sarmalayıcı (wrapper) sınıftır.
+- Bir hedef arayüz (interface). Bu da istemci tarafında isteklerini adaptör sınıfa göndermek için kullanılır.
+
+Adapter tasarım kalıbını uygulamak için aşağıdaki adımları izleyebiliriz.
+
+- Hedef arayüz (target interface) tasarlanır
+- Hedef arayüz, adaptör sınıfına uygulanır (implement)
+- İstemci (client) tarafından hedef arayüz kullanılarak istekler adaptör (adapter) sınıfa iletilir
+
+Adapter tasarım kalıbının Python uygulamalı örneğini [adapter.py](src/structural-patterns/adapter-pattern/adapter.py) dosyasında inceleyebilirsiniz.
 
