@@ -11,6 +11,7 @@
   - [Structural Patterns](#structural-patterns-1)
     - [Facade Pattern](#facade-pattern)
     - [Adapter Pattern](#adapter-pattern)
+    - [Composite Pattern](#composite-pattern)
 
 # Giriş
 
@@ -82,3 +83,21 @@ Adapter tasarım kalıbını uygulamak için aşağıdaki adımları izleyebilir
 
 Adapter tasarım kalıbının Python uygulamalı örneğini [adapter.py](src/structural-patterns/adapter-pattern/adapter.py) dosyasında inceleyebilirsiniz.
 
+### Composite Pattern
+
+Bu tasarım kalıbının ana iki hedefi vardır:
+
+- Nesnelerin iç içe yapılarını oluşturmak için (ağaç)
+- Bu nesnelerin sınıflarıyla tekdüze bir şekilde ilgilenmek
+
+Polymorphism kullanarak, tüm sınıflar aynı arayüze (interface) uyarlar. 
+
+Bir **Composite Class** kendisini implement eden tüm sınıfları (leaf class) tekdüze bir kalıba sokar. 
+
+**Leaf Class** composite olmayan (non-composite) sınıfları temsil eder.
+
+Composite Pattern, her sınıf için ağaç yapısını oluştururken bizi Polymorphism'e yönlendirirken bir arayüz (interface) implement etmeyi dayatır.
+
+Özyinelemeli (recursive) composite adı verilen bir teknik kullanarak nesnelerin diğer nesnelerden oluşmasına izin verir.
+
+Python'da Composite Pattern örneği için [composite.py](src/structural-patterns/composite-pattern/composite.py) dosyasına bakabilirsiniz.
