@@ -12,6 +12,7 @@
     - [Facade Pattern](#facade-pattern)
     - [Adapter Pattern](#adapter-pattern)
     - [Composite Pattern](#composite-pattern)
+    - [Proxy Pattern](#proxy-pattern)
 
 # Giriş
 
@@ -101,3 +102,16 @@ Composite Pattern, her sınıf için ağaç yapısını oluştururken bizi Polym
 Özyinelemeli (recursive) composite adı verilen bir teknik kullanarak nesnelerin diğer nesnelerden oluşmasına izin verir.
 
 Python'da Composite Pattern örneği için [composite.py](src/structural-patterns/composite-pattern/composite.py) dosyasına bakabilirsiniz.
+
+### Proxy Pattern
+
+Bu kalıp gerçek "konu/durum" (subject) sınıfını temsil eden bir **proxy** arayüzünün (interface) implement edilmesi üzerinedir. Proxy bir objenin daha basitleştirilmiş, hafif versiyonu olarak davranır. Bir Proxy obje aynı işleri orjinal obje olarak görebilir. Bunları yaparken gelen istekleri orjinal objeye delege edebilir.
+
+Bu tasarım kalıbında proxy sınıfı gerçek konu/durum (subject) sınıfını sarmalar. Sarmalayıcı bir sınıf olarak, istemci sınıfları direkt olarak konu/durum sınıfı yerine proxy sınıf ile muhatap olurlar. Proxy sınıflarının çoğunlukla kullanıldığı üç durum:
+
+- **Sanal (virtual) proxy** olarak davranırlar. Bu, bir proxy sınıfı olduğunda olan gerçek bir konu sınıfının yerine kullanılır. Genellikle web sayfalarındaki resimlerde veya grafik editörlerinde, yüksek çözünürlükteki resimler yüklenemeyecek kadar büyük olduğunda kullanılırlar.
+- **Koruyucu (protection) proxy** olarak davranırlar. Mesela proxy sınıfın gerçek sınıfa erişimi kontrol ettiği senaryolar. Örnek olarak öğrencier ve öğretmenler tarafından kullanılan bir sistemi rollere göre kısıtlamak.
+- **Uzak (remote) proxy** olarak davranırlar. Bu şekilde davranmak için proxy sınıfının localde, gerçek sınıfın uzakta (remote) var olması gereklidir. Google Docs, web tarayıcılarının yerel olarak ihtiyaç duyduğu tüm nesnelere sahip olan fakat başka bir yerde Google sunucusunda bulunan kaynaklar için bundan yararlanır.
+
+Proxy kalıbının Python ile örneği [proxy.py](src/structural-patterns/proxy-pattern/proxy.py) dosyasında gösterilmiştir.
+
