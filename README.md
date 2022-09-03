@@ -13,6 +13,7 @@
     - [Adapter Pattern](#adapter-pattern)
     - [Composite Pattern](#composite-pattern)
     - [Proxy Pattern](#proxy-pattern)
+    - [Decorator Pattern](#decorator-pattern)
 
 # Giriş
 
@@ -115,3 +116,8 @@ Bu tasarım kalıbında proxy sınıfı gerçek konu/durum (subject) sınıfın�
 
 Proxy kalıbının Python ile örneği [proxy.py](src/structural-patterns/proxy-pattern/proxy.py) dosyasında gösterilmiştir.
 
+### Decorator Pattern
+
+Çeşitli davranışları esnekçe uygulayabilmemizi sağlayan bir tasarım kalıbıdır. Ancak, bir nesnenin davranışı sınıfı tarafından tanımlandığından ve yalnızca derleme zamanında gerçekleştiğinden, bir program çalışırken sınıflarda değişiklik yapılamaz. Ek davranışsal özellikleri veya sorumlulukları dinamik olarak bir objeye toplulaştırma (aggregation) kullanarak çalışma esnasında atar.
+
+Proxy kalıbının Python ile örneği [decorator.py](src/structural-patterns/decorator-pattern/decorator.py) dosyasında gösterilmiştir.
