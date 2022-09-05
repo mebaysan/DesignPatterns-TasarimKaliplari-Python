@@ -14,6 +14,8 @@
     - [Composite Pattern](#composite-pattern)
     - [Proxy Pattern](#proxy-pattern)
     - [Decorator Pattern](#decorator-pattern)
+  - [Behavioral Pattern](#behavioral-pattern)
+    - [Template Method Pattern](#template-method-pattern)
 
 # Giriş
 
@@ -121,3 +123,14 @@ Proxy kalıbının Python ile örneği [proxy.py](src/structural-patterns/proxy-
 Çeşitli davranışları esnekçe uygulayabilmemizi sağlayan bir tasarım kalıbıdır. Ancak, bir nesnenin davranışı sınıfı tarafından tanımlandığından ve yalnızca derleme zamanında gerçekleştiğinden, bir program çalışırken sınıflarda değişiklik yapılamaz. Ek davranışsal özellikleri veya sorumlulukları dinamik olarak bir objeye toplulaştırma (aggregation) kullanarak çalışma esnasında atar.
 
 Proxy kalıbının Python ile örneği [decorator.py](src/structural-patterns/decorator-pattern/decorator.py) dosyasında gösterilmiştir.
+
+
+## Behavioral Pattern
+
+### Template Method Pattern
+
+Template Method kalıbı, ana sınıftan alt sınıfa implement ederek bir algoritmanın adımlarını tanımlar. 
+
+Bu kalıbın kullanılabileceği en iyi senaryolardan biri iki sınıfı tek bir ana sınıfta (superclass) genellemeye (generalize) çalışmaktır. Çok benzer işlevselliğe ve işlem sırasına sahip iki ayrı sınıfımız olduğunda kullanabileceğimiz bir tekniktir. Bir template method kullanmayı seçebiliriz, bu nedenle bu algoritmalarda yapılan değişikliklerin iki yerine yalnızca bir yerde uygulanması gerekir.
+
+Template Method kalıbının Python ile örneği [template_method.py](src/behavioral-patterns/template-method-pattern/template_method.py) dosyasında gösterilmiştir. 
