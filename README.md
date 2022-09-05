@@ -16,6 +16,7 @@
     - [Decorator Pattern](#decorator-pattern)
   - [Behavioral Pattern](#behavioral-pattern)
     - [Template Method Pattern](#template-method-pattern)
+    - [Chain of Responsibility Pattern](#chain-of-responsibility-pattern)
 
 # Giriş
 
@@ -134,3 +135,16 @@ Template Method kalıbı, ana sınıftan alt sınıfa implement ederek bir algor
 Bu kalıbın kullanılabileceği en iyi senaryolardan biri iki sınıfı tek bir ana sınıfta (superclass) genellemeye (generalize) çalışmaktır. Çok benzer işlevselliğe ve işlem sırasına sahip iki ayrı sınıfımız olduğunda kullanabileceğimiz bir tekniktir. Bir template method kullanmayı seçebiliriz, bu nedenle bu algoritmalarda yapılan değişikliklerin iki yerine yalnızca bir yerde uygulanması gerekir.
 
 Template Method kalıbının Python ile örneği [template_method.py](src/behavioral-patterns/template-method-pattern/template_method.py) dosyasında gösterilmiştir. 
+
+### Chain of Responsibility Pattern
+
+Chain of Responsibility kalıbı, isteklerin işlenmesinden sorumlu olan bir nesneler zinciridir. Yazılım tasarımında bu nesneler birbirine bağlı işleyici nesnelerdir.
+
+Aralardaki her filtre aşağıdaki adımları uygulamalıdır:
+
+- Kuralın eşleşip eşleşmediğini kontrol et
+- Eğer eşleşiyorsa, uygulaman gereken fonksiyonu uygula (ör: mail at, sayfaya yönlendir vs.)
+- Eğer eşleşmiyorsa, sıradaki diğer filtreyi çağır
+
+
+Chain of Responsibility kalıbının Python ile örneği [chain_responsibility.py](src/behavioral-patterns/chain-of-responsibility/chain_responsibility.py) dosyasında gösterilmiştir.
