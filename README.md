@@ -17,6 +17,7 @@
   - [Behavioral Pattern](#behavioral-pattern)
     - [Template Method Pattern](#template-method-pattern)
     - [Chain of Responsibility Pattern](#chain-of-responsibility-pattern)
+    - [State Pattern](#state-pattern)
 
 # Giriş
 
@@ -148,3 +149,9 @@ Aralardaki her filtre aşağıdaki adımları uygulamalıdır:
 
 
 Chain of Responsibility kalıbının Python ile örneği [chain_responsibility.py](src/behavioral-patterns/chain-of-responsibility/chain_responsibility.py) dosyasında gösterilmiştir.
+
+### State Pattern
+
+Kodumuzdaki nesneler mevcut durumlarının farkındadır. Mevcut durumlarına göre uygun bir davranış seçebilirler. Mevcut durumları değiştiğinde, bu davranış değiştirilebilir. Bu State Pattern kalıbıdır.
+
+State Pattern kalıbının Python ile örneği [state.py](state.src/behavioral-patterns/state-pattern/state.py) dosyasında gösterilmiştir.
